@@ -10,6 +10,8 @@ time: 2023-08-10 10:18:27
 
 [Next.js](https://nextjs.org/docs) 的主要优势之一是它支持服务器端渲染 （SSR）。SSR 允许你的应用在服务器上呈现，而不是在浏览器中呈现，这可以带来性能优势和改进的 SEO。另一方面，React 主要使用客户端渲染，这可能会导致初始页面加载速度变慢和 SEO 效率降低。
 
+同时[Next.js](https://nextjs.org/docs) 也支持 SSG(静态站点生成)，SSG 在构建时预渲染每个页面，为每个页面创建一个静态 HTML 文件。这可以显著提高性能，因为服务器可以直接提供这些静态文件，而无需在每个请求上生成它们。
+
 ## 内置 CSS 支持
 
 [Next.js](https://nextjs.org/docs) 内置了对 CSS 和 Sass 的支持，这对开发人员来说可能是一个显着的优势。这意味着您可以将 CSS 文件直接导入 [Next.js](https://nextjs.org/docs) 组件，而无需配置其他加载器或插件。虽然 [React](https://react.dev/) 支持 CSS，但它没有内置的支持，你经常需要使用额外的库或工具来有效地处理 CSS。
@@ -17,6 +19,10 @@ time: 2023-08-10 10:18:27
 ## Automatic Code Splitting
 
 [Next.js](https://nextjs.org/docs) 提供自动代码拆分，这意味着它只加载当前页面所需的 JavaScript。这可以显著提高应用程序的性能，尤其是对于具有许多组件的大型应用。React 还支持代码拆分，但它并不那么简单，需要更多的手动配置。
+
+## 路由接口
+
+[Next.js](https://nextjs.org/docs) 还支持 API 路由，允许您将 API 直接构建到 Next.js 应用程序中。您可以通过将文件添加到目录来在 app/api, [Next.js](https://nextjs.org/docs) 应用中创建无服务器函数和 API 终端节点。然后，可以将这些无服务器函数和 API 终结点部署为 [Next.js](https://nextjs.org/docs) 应用程序的一部分，从而简化部署过程并减少对单独后端的需求。
 
 ## SEO 友好
 

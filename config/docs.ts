@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 14:03:15
+ * @LastEditTime: 2023-08-10 14:25:26
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -90,39 +90,39 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-    //     {
-    //   title: "项目实战",
-    //   items: [
-    //     {
-    //       title: "写在前面",
-    //       href: "/docs/documentation/real-world-project",
-    //     },
-    //     {
-    //       title: "落地页",
-    //       href: "/docs/documentation/real-world-project/landing-page",
-    //     },
-    //             {
-    //       title: "博客项目",
-    //       href: "/docs/documentation/real-world-project/blog",
-    //     },
-    //   ],
-    // },
-    //         {
-    //   title: "工具或文档推荐",
-    //   items: [
-    //     {
-    //       title: "写在前面",
-    //       href: "/docs/documentation/tools",
-    //     },
-    //     {
-    //       title: "环境要求",
-    //       href: "/docs/documentation/tools/requirement",
-    //     },
-    //             {
-    //       title: "包管理工具对比",
-    //       href: "/docs/documentation/tools/package-manage",
-    //     },
-    //   ],
-    // },
+    {
+      title: "项目实战",
+      items: [
+        {
+          title: "写在前面",
+          href: "/docs/documentation/real-world-project",
+        },
+        // {
+        //   title: "落地页",
+        //   href: "/docs/documentation/real-world-project/landing-page",
+        // },
+        //         {
+        //   title: "博客项目",
+        //   href: "/docs/documentation/real-world-project/blog",
+        // },
+      ],
+    },
+            {
+      title: "工具或文档推荐",
+      items: [
+        {
+          title: "写在前面",
+          href: "/docs/documentation/tools",
+        },
+        // {
+        //   title: "环境要求",
+        //   href: "/docs/documentation/tools/requirement",
+        // },
+        //         {
+        //   title: "包管理工具对比",
+        //   href: "/docs/documentation/tools/package-manage",
+        // },
+      ],
+    },
   ],
 }
