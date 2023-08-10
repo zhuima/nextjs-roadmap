@@ -47,7 +47,7 @@ export async function generateMetadata({
   ogUrl.searchParams.set("mode", "dark");
 
   return {
-    title: `${doc.title} | 软考知识库 | 软考通关宝典`,
+    title: `${doc.title} | Next.js 学习之路`,
     description: doc.description,
     openGraph: {
       title: doc.title,

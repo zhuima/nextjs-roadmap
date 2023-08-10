@@ -19,7 +19,7 @@ export const docsConfig: DocsConfig = {
   ],
   sidebarNav: [
     {
-      title: "写在前面",
+      title: "前言",
       items: [
         {
           title: "写在前面",
