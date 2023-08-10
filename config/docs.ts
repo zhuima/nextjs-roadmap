@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 11:15:37
+ * @LastEditTime: 2023-08-10 14:03:15
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -77,7 +77,7 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation/chapter3",
         },
         {
-          title: "初学者在开始使用 Next 时应注意的事项.js 13",
+          title: "初学者在开始使用 Next.js 时应注意的事项",
           href: "/docs/documentation/chapter3/Things-Beginners-Should-Be-Aware-of-When-Starting-with-Next.js-13",
         },
         {
