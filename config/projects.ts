@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-28 14:13:59
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-01 14:47:43
+ * @LastEditTime: 2023-08-10 14:40:45
  * @FilePath: /nextjs-roadmap/config/projects.ts
  * @Description: 
  * 
@@ -16,7 +16,7 @@ const projectsData = [
     tag: `Landing Page`,
     time: `2023-07`,
     imgSrc: '/Landing-Page.png',
-    href: 'https://www.bilibili.com/video/BV1Ce411N7pV/',
+    href: '#',
   },
     {
     id: 10087,
@@ -25,7 +25,7 @@ const projectsData = [
     tag: `TODO Application`,
     time: `2023-07`,
     imgSrc: '/todo.png',
-    href: 'https://www.bilibili.com/video/BV1Ce411N7pV/',
+    href: '#',
   },
     {
     id: 10088,
@@ -34,7 +34,7 @@ const projectsData = [
     tag: `Blog`,
     time: `2023-07`,
     imgSrc: '/blog.png',
-    href: 'https://www.bilibili.com/video/BV1Ce411N7pV/',
+    href: '#',
   },
       {
     id: 10089,
@@ -43,7 +43,7 @@ const projectsData = [
     tag: `KanBan`,
     time: `2023-07`,
     imgSrc: '/kanban.png',
-    href: 'https://github.com/Kliton/react-kanban-board-dnd-kit-tutorial-yt/blob/main/src/components/ColumnContainer.tsx',
+    href: '#',
   },
         {
     id: 10090,
@@ -52,7 +52,7 @@ const projectsData = [
     tag: `Notion Clone`,
     time: `2023-07`,
     imgSrc: '/notion.png',
-    href: 'https://github.com/Kliton/react-kanban-board-dnd-kit-tutorial-yt/blob/main/src/components/ColumnContainer.tsx',
+    href: '#',
   },
   
 ]
