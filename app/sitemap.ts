@@ -11,7 +11,7 @@
 // app/sitemap.js
 // https://claritydev.net/blog/nextjs-dynamic-sitemap-pages-app-directory
 
-const URL = "https://ruankao.eu.org";
+const URL = "https://techrk1688.eu.org";
 
 export default async function sitemap() {
   const routes = [

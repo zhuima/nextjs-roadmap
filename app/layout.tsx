@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-06 15:11:36
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 11:47:53
+ * @LastEditTime: 2023-08-10 13:44:47
  * @FilePath: /nextjs-roadmap/app/layout.tsx
  * @Description:
  *
@@ -22,6 +22,12 @@ export const metadata = {
   description:
     "Next.js 13 学习之路, Next.js App Router, Next.js Image, Next.js 13, Next.js 13 Link",
   keywords: ["Next.js 13", "Next.js 13 学习之路", "Next.js 13 Link"],
+  alternates: {
+    canonical: "https://techrk1688.eu.org/",
+    types: {
+      "application/rss+xml": [{ url: "feed.xml", title: "RSS 订阅" }],
+    },
+  },
 };
 
 export default function RootLayout({
