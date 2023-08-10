@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* 图片浅容器背景 */
+  .img-loading-bg {
+    @apply bg-neutral-100 dark:bg-neutral-900 transition-[background-color];
+  }
+
+  /* 图片加载中 Spin 效果 */
+  .img-loading-spin {
+    @apply bg-neutral-100 dark:bg-neutral-900 transition-[background-color] before:animate-spin before:absolute motion-reduce:before:relative;
+  }
+
+  /* 基本按钮 */
+  .btn-base {
+    @apply hover:ring-0 sm:hover:bg-neutral-200 dark:sm:hover:bg-neutral-800 active:ring-4 active:ring-offset-2 active:ring-offset-neutral-100 dark:active:ring-offset-black active:ring-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-100 dark:focus-visible:ring-offset-black focus-visible:ring-blue-600 transition-[background-color] hover:transition-none dark:hover:transition-none select-none;
+  }
+
+  .btn-md {
+    @apply text-lg p-2 rounded leading-tight;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 rounded-lg font-medium;
+  }
+
+  .btn-icon {
+    @apply text-lg p-2 rounded;
+  }
+
+  .btn-bg {
+    @apply bg-neutral-100 dark:bg-neutral-900;
+  }
+
+  /* 给非按钮添加 Tab 键聚焦后的 Outline 效果 */
+  .ring-default {
+    @apply focus:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:ring-offset-black focus:ring-blue-600 rounded-md;
+  }
+}
+
+@layer utilities {
+  .step {
+    counter-increment: step;
+  }
+
+  .step:before {
+    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
+}

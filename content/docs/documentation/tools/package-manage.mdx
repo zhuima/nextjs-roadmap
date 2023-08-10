@@ -1,0 +1,123 @@
+---
+title: npm vs yarn vs pnpm
+description: 包管理器之间的比较.
+time: 2023-07-06 16:18:27
+---
+
+https://bluuweb.dev/blog/npm-vs-yarn-vs-pnpm.html
+
+Los gestores de paquetes son una parte esencial de cualquier ecosistema de desarrollo de software. En JavaScript, NPM, Yarn y PNPM son tres gestores de paquetes populares. Vamos a explorar qué son, cómo funcionan, sus características, y ventajas y desventajas.
+包管理器是任何软件开发生态系统的重要组成部分。在 JavaScript 中，NPM，Yarn 和 PNPM 是三个流行的包管理器。让我们探讨它们是什么、它们是如何工作的、它们的功能以及优缺点。
+
+NPM#
+NPM, significa Node Package Manager, es el gestor de paquetes predeterminado para Node.js. Se utiliza para instalar y administrar dependencias de paquetes para tu proyecto.
+NPM 代表 Node Package Manager，是 Node.js 的默认包管理器。用于安装和管理项目的包依赖项。
+
+Cómo funciona: NPM descarga paquetes desde su registro central y los guarda en tu proyecto en una carpeta llamada node_modules.
+工作原理：NPM 从其中央注册表下载包，并将它们保存到项目中 node_modules 名为 .
+
+Características: 特性：
+
+Amplia adopción y soporte
+广泛的采用和支持
+Facilita el control de versiones y la gestión de dependencias
+促进版本控制和依赖关系管理
+Proporciona scripts para automatizar tareas
+提供脚本以自动执行任务
+Ventajas: 优势：
+
+Es fácil de usar y aprender
+易于使用和学习
+Cuenta con una gran comunidad y una gran cantidad de paquetes
+它有一个庞大的社区和大量的包裹
+Desventajas: 弊：
+
+La instalación de paquetes puede ser lenta
+软件包安装可能很慢
+Duplica dependencias, ocupando más espacio en disco
+重复依赖项，占用更多磁盘空间
+Instalación de NPM 安装 NPM#
+Al instalar node.js viene por defecto con NPM, para verificar que lo tengas instalado puedes ejecutar el siguiente comando en tu terminal:
+安装 node.js 默认带有 NPM，要验证是否已安装它，您可以在终端中执行以下命令：
+
+sh
+npm -v
+Yarn 纱#
+Yarn es un gestor de paquetes desarrollado por Facebook que se introdujo para solucionar algunas limitaciones de NPM, en particular la velocidad y la seguridad.
+Yarn 是由 Facebook 开发的包管理器，旨在解决一些 NPM 限制，特别是速度和安全性。
+
+Cómo funciona: Yarn también utiliza el registro de NPM, pero instala paquetes más rápidamente mediante el uso de un algoritmo de instalación eficiente y un sistema de caché local.
+工作原理：Yarn 还使用 NPM 日志记录，但通过使用高效的安装算法和本地缓存系统可以更快地安装软件包。
+
+Características: 特性：
+
+Velocidad de instalación rápida
+安装速度快
+Caché offline 隐藏离线
+Determinismo de instalación a través de un archivo yarn.lock
+通过文件 yarn.lock 确定安装确定性
+Ventajas: 优势：
+
+Rápido y eficiente 快速高效
+Maneja las dependencias de manera más segura y fiable
+更安全、更可靠地处理依赖关系
+Desventajas: 弊：
+
+No todos los paquetes pueden ser compatibles con Yarn
+并非所有包装都可以与纱线兼容
+Instalación de Yarn 安装纱线#
+Para instalar Yarn puedes seguir los pasos de su documentación, o ejecutar el siguiente comando en tu terminal:
+要安装 Yarn，您可以按照其文档中的步骤进行操作，或在终端中运行以下命令：
+
+sh
+npm install --global yarn
+PNPM PNPM#
+PNPM es un gestor de paquetes que se propuso solucionar un problema que tanto NPM como Yarn tenían: el uso excesivo de espacio en disco.
+PNPM 是一个包管理器，旨在解决 NPM 和 Yarn 都存在的问题：磁盘空间使用过多。
+
+Cómo funciona: PNPM utiliza un almacenamiento global para paquetes en lugar de duplicarlos en cada proyecto.
+工作原理：PNPM 对包使用全局存储，而不是基于每个项目复制它们。
+
+Características: 特性：
+
+Gestión eficiente del espacio en disco
+高效的磁盘空间管理
+Rápido y con buen rendimiento
+速度快，性能好
+Enlace de paquetes para evitar duplicaciones
+包绑定以避免重复
+Ventajas: 优势：
+
+Ahorro de espacio en disco
+节省磁盘空间
+Evita el "problema de los paquetes planos" (flat package issue)
+避免“扁平包装问题”
+Desventajas: 弊：
+
+Menos adopción en comparación con NPM y Yarn
+与 NPM 和纱线相比，采用率更低
+Puede presentar problemas de compatibilidad con algunos paquetes
+某些软件包可能存在兼容性问题
+Instalación de PNPM 安装 PNPM#
+Para instalar PNPM puedes seguir los pasos de su documentación, o ejecutar el siguiente comando en tu terminal:
+要安装 PNPM，您可以按照其文档中的步骤操作，或在终端中运行以下命令：
+
+sh
+npm install -g pnpm
+Comparativa 比较级#
+A continuación, presentamos un cuadro comparativo con algunos de los comandos más comunes:
+下面是一些最常见命令的比较图表：
+
+```js
+Comando 命令 NPM Yarn 纱 PNPM PNPM
+Instalar 安装 npm install npm 安装 yarn install 纱线安装 pnpm install PNPM 安装
+Añadir paquete 添加包 npm install <paquete> npm 安装 <paquete> yarn add <paquete> 纱线添加 <paquete> pnpm add <paquete> PNPM 添加 <paquete>
+Añadir paquete (dev) 添加包（开发） npm install -D <paquete> npm install -D <paquete> yarn add -D <paquete> 纱线添加-D <paquete> pnpm add -D <paquete> pnpm 添加 -D <paquete>
+Remover paquete 删除包 npm uninstall <paquete> npm 卸载 <paquete> yarn remove <paquete> 除 <paquete> 纱 pnpm remove <paquete> pnpm 删除 <paquete>
+Actualizar paquete 更新包 npm update <paquete> NPM 更新 <paquete> yarn upgrade <paquete> 纱线升级 <paquete> pnpm update <paquete> PNPM 更新 <paquete>
+Instalar globalmente 全局安装 npm install -g <paquete> npm install -g <paquete> yarn global add <paquete>
+纱线全球添加 <paquete> pnpm add -g <paquete> pnpm 添加 -g <paquete>
+Conclusión 结论#
+En resumen, NPM, Yarn y PNPM son tres gestores de paquetes excelentes, cada uno con sus propios beneficios y desventajas. El mejor para tu proyecto dependerá de tus necesidades específicas.
+总之，NPM，Yarn 和 PNPM 是三个优秀的包管理器，每个都有自己的优点和缺点。最适合您项目的方法将取决于您的特定需求。
+```

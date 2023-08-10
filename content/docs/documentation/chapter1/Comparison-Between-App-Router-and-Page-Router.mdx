@@ -1,0 +1,42 @@
+---
+title: App Router 和 Page Router的区别
+description: App Router 和 Page Router的区别.
+time: 2023-08-10 10:18:27
+---
+
+在 Web 开发领域，路由在确定应用程序如何响应客户端请求方面起着至关重要的作用。在本文中，我们将深入研究 Next.js 的两个关键组件 App Router 和 Page Router 之间的区别。
+
+## 了解 Page Router 的概念
+
+Page Router 是 Web 开发中的基本概念。它是指在单页应用程序 （SPA） 中定义多个路由的过程。在 Next.js 中，Page Router 是基于文件系统的。这意味着 pages 目录中的每个文件都自动成为路由。
+
+例如，如果创建一个在 pages 目录中调用 about.js 的文件，则可以在 访问 yourwebsite.com/about 该文件。此方法简化了路由过程，并使管理大型应用程序中的路由变得更加容易。
+
+## App Router 和 Page Router 的区别
+
+虽然 App Router 和 Page Router 在 Next.js 应用程序中管理路由的目的相同，但它们在几个方面有所不同：
+
+- 灵活性：App Router 提供比 Page Router 更大的灵活性。它允许您使用参数定义动态路由，这是 Page Router 无法实现的。
+
+- 嵌套路由：使用 App Router，您可以创建嵌套路由，这是 Page Router 中不可用的功能。
+
+- 中间件：应用路由器支持中间件，允许您在呈现页面之前运行服务器端代码。此功能在 Page Router 中不可用。
+
+## 使用 App Router 而不是 Page Router 的优缺点
+
+与 Page Router 相比，App Router 具有几个优点：
+
+- 它在定义路由时提供了更大的灵活性。
+- 它支持嵌套路由和中间件。
+- 它允许使用参数进行动态路由。
+
+但是，App Router 也有其缺点：
+
+- 与 Page Router 相比，设置和管理可能更复杂。
+- 对于不需要高级路由功能的简单应用程序来说，这可能是矫枉过正的。
+
+## 如何选择
+
+App Router 和 Page Router 之间的选择取决于应用程序的特定需求。如果您需要高级路由功能，如嵌套路由、带参数的动态路由或中间件，App Router 将是更好的选择。另一方面，如果您的应用程序很简单并且不需要这些功能，则 Page Router 就足够了。
+
+总之，App Router 和 Page Router 在 Next.js 开发中都有其位置。了解它们的差异并知道何时使用其中一个对于构建高效且可扩展的 Next.js 应用程序至关重要。

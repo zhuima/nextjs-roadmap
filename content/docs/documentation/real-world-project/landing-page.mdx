@@ -1,0 +1,78 @@
+---
+title: 10分钟搭建一个Landing Page
+description: 如何使用 Tailwind CSS 写官网.
+time: 2023-07-06 16:18:27
+---
+
+## Requisitos 要求
+
+node js：是一个基于 JavaScript 编程语言的跨平台、开源、服务器层运行时环境（但不限于）。Node.js® 是使用 Chrome 的 JavaScript 引擎 V8 构建的 JavaScript 运行时环境。
+
+npm：NPM（节点包管理器）是由 Isaac Schlueter 完全在 JavaScript 语言下开发的包管理器，通过它我们只需一行简单的代码即可获得任何库，这将使我们能够以简单的方式添加依赖项，分发包并有效地管理模块和要开发的项目。喷泉
+它是 Node.js 的标准包管理器或依赖项。
+
+### 验证
+
+> node 版本 要求 14.x 以上
+
+```js
+node - v;
+```
+
+> npm 版本 要求 6.x 以上
+
+```js
+npm - v;
+```
+
+## 技术
+
+- Next JS -- my favorite full stack framework
+  下一个 JS -- 我最喜欢的全栈框架
+- Tailwind CSS -- because I don't know how to do CSS otherwise
+  顺风 CSS——因为我不知道怎么做 CSS，否则
+- tailblocks.cc
+  首先推荐一个网站 tailblocks.cc， 它拥有 50+ 代码块，在右上角可以切换网站主题颜色，所有的代码块都是响应式的，并且支持暗黑皮肤。 通过键盘左右键可以快速切换、预览效果。
+- https://chakra-templates.dev/
+
+- Vercel -- deployment Vercel -- 部署
+
+## 官网的组成
+
+HEADER 头部
+
+HERO
+
+CONTENT 内容
+
+GALLERY 画廊
+
+BLOG 博客
+
+TEAM 团队
+
+CONTACT 联系
+
+FOOTER 底部
+
+## 开始
+
+若要开始，请使用以下命令创建新的 Next.js 项目：
+
+```tsx
+npx create-next-app@least
+```
+
+对应的 **next.config.js** 配置
+
+```JavaScript
+npx create-next-app landing-page
+
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like to use `src/` directory? … No / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to customize the default import alias? … No / Yes
+✔ What import alias would you like configured? … @/*
+```

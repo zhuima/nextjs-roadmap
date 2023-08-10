@@ -1,0 +1,25 @@
+---
+title: 区分 Next.js 与 React
+description: 区分 Next.js 与 React.
+time: 2023-08-10 10:18:27
+---
+
+在 Web 开发领域，Next.js 和 React 都是开发人员的热门选择。虽然它们有一些相似之处，但两者之间也存在显着差异。本文将深入探讨 Next.js 13 和 React 之间的主要区别。
+
+## 定位
+
+React 是一个用于构建用户界面的 JavaScript 库，主要用于单页应用程序。它允许开发人员创建可重用的 UI 组件。另一方面，Next.js 是一个 React 框架，它提供了一种构建服务器端渲染和静态 Web 应用程序的解决方案。
+
+## 路由
+
+在 React 中，路由不是现成的。开发人员经常使用第三方库（如 React Router）进行客户端路由。但是，Next.js 提供了一个基于页面概念构建的基于文件系统的路由器。将文件添加到“pages”目录后，它会自动用作路由。
+
+## 数据获取
+
+React 本身没有用于数据获取的内置解决方案。开发人员经常使用第三方库（如 Axios 或 Fetch API）来实现此目的。但是 Next.js 接下来提供了几个内置函数，如在Page Router模式下提供getServerSideProps 、 和 getInitialProps 用于 getStaticProps 服务器端和客户端的数据提取。在 App Router 模式下提供GenerateStaticPaths 用于静态路径生成。GenerateProps 用于静态数据提取。
+
+## 性能优化
+
+React 不提供自动性能优化。开发人员需要手动优化其应用程序的性能。另一方面 Next.js 会自动优化应用程序以获得更好的性能。它包括自动代码拆分，这意味着它只加载页面所需的 JavaScript，减少了浏览器需要加载和执行的代码量。
+
+总之，虽然 React 提供了按照您认为合适的方式构建应用程序的灵活性和自由度，但 Next.js 提供了一个更加固执己见的解决方案，为开发人员提供了一组最佳实践和约定来构建服务器渲染的 React 应用程序。了解这些差异可以帮助您就下一个项目使用哪种工具做出明智的决定。

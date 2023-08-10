@@ -1,0 +1,74 @@
+/*
+ * @Author: zhuima zhuima314@gmail.com
+ * @Date: 2023-06-06 10:41:34
+ * @LastEditors: zhuima zhuima314@gmail.com
+ * @LastEditTime: 2023-08-01 14:14:39
+ * @FilePath: /nextjs-roadmap/components/header.tsx
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ */
+"use client";
+import Link from "next/link";
+import MobileMenu from "./mobile-menu";
+import { useScrollPosition } from "../hooks/useScrollPosition";
+
+const Header = () => {
+  const scrollPosition = useScrollPosition();
+
+  return (
+    <header
+      className={`sticky top-0 z-50 transition-shadow  ${
+        scrollPosition > 0
+          ? "shadow-2xl shadow-cyan-200/50 bg-opacity-70 backdrop-blur-lg backdrop-filter"
+          : "shadow-none"
+      }`}
+    >
+      <div className="xl:container m-auto px-6 md:px-12 lg:px-6">
+        <div className="flex flex-row items-center justify-between h-20 w-full">
+          {/* Site branding */}
+          <div className="shrink-0 mr-4">
+            {/* Logo */}
+            <Link
+              className="flex items-center relative z-10"
+              href="/"
+              aria-label="logo"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span className="ml-3 text-xl">Next.js 学习之路</span>
+            </Link>
+          </div>
+
+          <MobileMenu />
+
+          {/* Desktop navigation */}
+          <div className="navmenu hidden w-full flex-wrap justify-end items-center mb-16 space-y-8 p-6 border border-gray-100 rounded-3xl shadow-2xl shadow-gray-300/20 bg-white dark:bg-gray-800 lg:space-y-0 lg:p-0 lg:m-0 lg:flex md:flex-nowrap lg:bg-transparent  lg:shadow-none dark:shadow-none dark:border-gray-700 lg:border-0">
+            <div className="lg:pr-4">
+              <ul className="space-y-6 tracking-wide font-medium  lg:text-sm lg:flex lg:space-y-0 [&:not(:hover)>li]:opacity-100 [&>li]:transition-opacity">
+                <li className="[&:not(:hover)]:opacity-50  block md:px-4 ">
+                  <Link href="/docs">知识库</Link>
+                </li>
+                <li className="[&:not(:hover)]:opacity-50  block md:px-4 ">
+                  <Link href="/projects">项目案例</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

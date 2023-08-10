@@ -1,0 +1,39 @@
+---
+title: 使用 Next.js 13 构建简单hello world页面
+description: 使用 Next.js 13 构建简单hello world页面.
+time: 2023-08-10 10:18:27
+---
+
+在本单元中，我们将演练使用 Next.js 13 构建简单 hello world 页面的过程。这将有助于巩固您对框架的理解，并为您提供使用它的实际经验。
+
+## 规划和设计一个简单的 Next.js 13 应用程序
+
+在开始编码之前，规划和设计应用程序非常重要。这包括决定应用程序的功能、用户界面及其将处理的数据。在本教程中，我们将创建一个简单的博客应用程序。
+
+## 创建一个项目
+
+1. 首先，打开你的终端并切换到你想创建项目的目录。运行以下命令来创建一个新的 Next.js 13 应用程序：
+
+```bash
+npx create-next-app@latest hello-world
+```
+
+2. 然后，进入 hello-world 目录并打开 app 文件夹。在该文件夹中，找到 page.js 文件（这是主页的源文件）并打开它。
+
+3. 在 page.js 文件中，删除默认的页面内容，并将其替换为以下代码：
+
+```bash
+export default function Home() {
+  return <h1>Hello World</h1>
+}
+```
+
+4. 保存文件后，返回终端并确保你仍然处于 hello-world 目录下。运行以下命令来启动服务器：
+
+```bash
+npm run dev
+```
+
+5. 当终端显示 "Ready on http://localhost:3000" 时，表示服务器已经启动。现在，你可以在浏览器中访问 http://localhost:3000 来查看你的应用程序。你将看到一个页面，页面上显示 "Hello World"。
+
+通过执行这些步骤，您现在应该对如何构建和部署简单的 Next.js 13 应用程序有基本的了解。继续练习和探索 Next.js 13 的更多功能，以变得更加熟练。

@@ -1,0 +1,25 @@
+---
+title: Next.js入门必知
+description: Next.js入门之道.
+time: 2023-07-06 16:18:27
+---
+
+优先按照这个来：https://zerotomastery.io/courses/learn-next-js/
+
+https://welearncode.com/beginners-guide-nextjs/
+
+https://www.freecodecamp.org/news/nextjs-tutorial/
+
+https://frontendmasters.com/workshops/next-js-v3/
+
+
+
+        location ~ ^/dy/ {
+            proxy_pass   https://live.douyin.com;
+            proxy_set_header Connection "";
+            proxy_set_header Host live.douyin.com;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+
