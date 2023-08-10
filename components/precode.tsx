@@ -1,3 +1,13 @@
+/*
+ * @Author: zhuima zhuima314@gmail.com
+ * @Date: 2023-08-02 13:30:02
+ * @LastEditors: zhuima zhuima314@gmail.com
+ * @LastEditTime: 2023-08-10 12:05:29
+ * @FilePath: /nextjs-roadmap/components/precode.tsx
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ */
 "use client";
 import { useState, useRef, ReactNode } from "react";
 
@@ -19,6 +29,7 @@ const Pre = ({ children }: Props) => {
   };
   const onCopy = () => {
     setCopied(true);
+    // @ts-ignore
     navigator.clipboard.writeText(textInput.current.textContent);
     setTimeout(() => {
       setCopied(false);
