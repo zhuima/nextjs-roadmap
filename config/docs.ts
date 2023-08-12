@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 14:25:26
+ * @LastEditTime: 2023-08-12 22:37:47
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -112,7 +112,7 @@ export const docsConfig: DocsConfig = {
       items: [
         {
           title: "写在前面",
-          href: "/docs/documentation/tools",
+          href: "/docs/documentation/Tools-and-Tutorials",
         },
         { 
           title: "JavaScript 优秀教程推荐",
