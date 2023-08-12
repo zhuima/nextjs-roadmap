@@ -114,6 +114,11 @@ export const docsConfig: DocsConfig = {
           title: "写在前面",
           href: "/docs/documentation/tools",
         },
+        { 
+          title: "JavaScript 优秀教程推荐",
+          href: "/docs/documentation/Tools-and-Tutorials/JavaScript-tutorial-recommendation"
+        },
+
         // {
         //   title: "环境要求",
         //   href: "/docs/documentation/tools/requirement",
