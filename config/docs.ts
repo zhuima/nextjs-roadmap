@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-12 22:37:47
+ * @LastEditTime: 2023-08-14 18:46:07
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -64,8 +64,8 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation/chapter2/Differences-between-Next.js.13-and-React",
         },
         {
-          title: "使用 Next.js 13 优于 React 的优势",
-          href: "/docs/documentation/chapter3/Advantages-of-Using-Next.js-13-Over-React",
+          title: "使用 Next.js 优于 React 的优势",
+          href: "/docs/documentation/chapter2/Advantages-of-Using-Next.js-13-Over-React",
         },
       ],
     },
@@ -85,7 +85,7 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation/chapter3/Installation-and-Setup-of-Next.js-13",
         },
         {
-          title: "使用 Next.js 13 构建简单 hello world 页面",
+          title: "使用 Next.js 构建简单 hello world 页面",
           href: "/docs/documentation/chapter3/Building-hello-world-page-with-Next.js-13",
         },
       ],

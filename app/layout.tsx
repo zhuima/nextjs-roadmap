@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-06 15:11:36
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 13:44:47
+ * @LastEditTime: 2023-08-14 18:45:16
  * @FilePath: /nextjs-roadmap/app/layout.tsx
  * @Description:
  *
@@ -18,10 +18,10 @@ import ScrollToTop from "../components/ScrollToTopButton";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Next.js 13 学习之路",
+  title: "Next.js 学习之路",
   description:
-    "Next.js 13 学习之路, Next.js App Router, Next.js Image, Next.js 13, Next.js 13 Link",
-  keywords: ["Next.js 13", "Next.js 13 学习之路", "Next.js 13 Link"],
+    "Next.js 学习之路, Next.js App Router, Next.js Image, Next.js, Next.js Link",
+  keywords: ["Next.js", "Next.js 学习之路", "Next.js Link"],
   alternates: {
     canonical: "https://techrk1688.eu.org/",
     types: {
