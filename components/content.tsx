@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-31 14:29:32
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-14 18:45:44
+ * @LastEditTime: 2023-08-14 19:12:26
  * @FilePath: /nextjs-roadmap/components/content.tsx
  * @Description:
  *
@@ -11,6 +11,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import DocContactCard from "@/components/contactcard";
+import { IoPerson } from "react-icons/io5";
 
 const Content = () => {
   return (
@@ -23,6 +25,20 @@ const Content = () => {
           仅以此电子书来记录自己的 Next.js 学习之路，
           希望我的学习之旅也能给你带来少许帮助.
         </p>
+        {/* <div className="inline-flex items-center justify-center text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 rounded-md">
+          <DocContactCard />
+          <div className="flex gap-2 justify-center items-center">
+            <IoPerson />
+            联系我们
+          </div>
+        </div> */}
+        <div className="flex-1 btn-base text-white text-base text-muted-foreground btn-md sm:btn-lg bg-indigo-500 border dark:border-black border-neutral-200 dark:hover:border-neutral-800  sm:hover:bg-indigo-600 relative transition-colors">
+          <DocContactCard />
+          <div className="flex gap-2 justify-center items-center">
+            <IoPerson />
+            联系我们
+          </div>
+        </div>
         <div className="space-x-4">
           <Link
             href="/docs"
