@@ -15,7 +15,12 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: { appDir: true },
   images: {
-    domains: ["tailus.io", "api.themoviedb.org", "i.ibb.co"],
+    domains: [
+      "tailus.io",
+      "api.themoviedb.org",
+      "i.ibb.co",
+      "img.techrk1688.eu.org",
+    ],
   },
   async rewrites() {
     return [
