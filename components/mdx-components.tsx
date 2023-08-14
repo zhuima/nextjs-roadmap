@@ -14,7 +14,7 @@ import { CopyButton } from "./copycode";
 import Pre from "./precode";
 
 const CustomImage = ({ ...props }: React.HTMLAttributes<HTMLElement>) => (
-  <Zoom>
+  <Zoom {...props}>
     <Image {...props} alt={props.description} />
   </Zoom>
 );
