@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-15 14:35:35
+ * @LastEditTime: 2023-08-15 15:48:39
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -69,7 +69,7 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-            {
+    {
       title: "第三章",
       items: [
         {
@@ -88,6 +88,24 @@ export const docsConfig: DocsConfig = {
           title: "使用 Next.js 构建简单 hello world 页面",
           href: "/docs/documentation/chapter3/Building-hello-world-page-with-Next.js-13",
         },
+      ],
+    },
+        {
+      title: "第四章",
+      items: [
+        {
+          title: "内容简介",
+          href: "/docs/documentation/chapter4",
+        },
+        {
+          title: "Next.js 中错误处理",
+          href: "/docs/documentation/chapter4/Handling-Errors-in-Next.js-13",
+        },
+        {
+          title: "Next.js 最佳实践",
+          href: "/docs/documentation/chapter4/Real-Case-and-Best-Practices-with-Next.js-13",
+        }
+   
       ],
     },
     {
