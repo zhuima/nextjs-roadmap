@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-28 14:13:59
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-10 14:40:45
+ * @LastEditTime: 2023-08-15 15:39:04
  * @FilePath: /nextjs-roadmap/config/projects.ts
  * @Description: 
  * 
@@ -15,7 +15,7 @@ const projectsData = [
     description: `如何快速便捷的搭建一个企业级的Landing Page`,
     tag: `Landing Page`,
     time: `2023-07`,
-    imgSrc: '/Landing-Page.png',
+    imgSrc: 'https://img.techrk1688.eu.org/file/3b133aafa02c089bef10a.jpg',
     href: '#',
   },
     {
@@ -24,7 +24,7 @@ const projectsData = [
     description: `如何快速便捷的搭建一个TODO应用，带你快速实现基于Next.js的CURD`,
     tag: `TODO Application`,
     time: `2023-07`,
-    imgSrc: '/todo.png',
+    imgSrc: 'https://img.techrk1688.eu.org/file/2373ffc8bda0d77cee088.png',
     href: '#',
   },
     {
@@ -33,7 +33,7 @@ const projectsData = [
     description: `如何快速便捷的搭建高逼格的Blog,内容基于Markdown编写`,
     tag: `Blog`,
     time: `2023-07`,
-    imgSrc: '/blog.png',
+    imgSrc: 'https://img.techrk1688.eu.org/file/651b19a74f2e1d37154cb.png',
     href: '#',
   },
       {
@@ -42,7 +42,7 @@ const projectsData = [
     description: `如何快速便捷的搭建可拖拽的KanBan工具`,
     tag: `KanBan`,
     time: `2023-07`,
-    imgSrc: '/kanban.png',
+    imgSrc: 'https://img.techrk1688.eu.org/file/99463ff8744faacf0f6b3.jpg',
     href: '#',
   },
         {
@@ -51,7 +51,7 @@ const projectsData = [
     description: `Notion这个工具大家并不陌生, 本项目就是带领大家实现一个属于自己的Notion`,
     tag: `Notion Clone`,
     time: `2023-07`,
-    imgSrc: '/notion.png',
+    imgSrc: 'https://img.techrk1688.eu.org/file/667f548993d7f543e0f30.jpg',
     href: '#',
   },
   
