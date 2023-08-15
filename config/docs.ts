@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-14 18:46:07
+ * @LastEditTime: 2023-08-15 14:35:35
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -118,7 +118,10 @@ export const docsConfig: DocsConfig = {
           title: "JavaScript 优秀教程推荐",
           href: "/docs/documentation/Tools-and-Tutorials/JavaScript-tutorial-recommendation"
         },
-
+        { 
+          title: "学习全栈开发的最佳备忘单",
+          href: "/docs/documentation/Tools-and-Tutorials/Best-Cheatsheets-to-Learn-Full-Stack-Development"
+        },
         // {
         //   title: "环境要求",
         //   href: "/docs/documentation/tools/requirement",
