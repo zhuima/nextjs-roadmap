@@ -69,7 +69,7 @@ export default function CustomLink({ children, href }) {
         {isHovering && (
           <Link href={href} passHref>
             <span
-              className="w-56 h-44 absolute -mt-6 top-[-195px] left-1/2 transform -translate-x-[7rem] translate-y-8 flex items-start justify-center"
+              className="w-56 h-44 absolute -mt-5 top-[-195px] left-1/2 transform -translate-x-[7rem] translate-y-8 flex items-start justify-center"
               onMouseLeave={handleMouseLeaveImage}
               onMouseEnter={handleMouseEnterImage}
               onFocus={handleMouseEnterImage}
