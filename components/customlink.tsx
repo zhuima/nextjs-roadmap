@@ -44,7 +44,7 @@ export default function CustomLink({ children, href }) {
       setImagePreview(data.image);
       plausible("Link Preview");
     },
-    [origin]
+    [origin, plausible]
   );
 
   React.useEffect(() => {
