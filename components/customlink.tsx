@@ -55,7 +55,7 @@ export default function CustomLink({ children, href }) {
 
   return (
     <span>
-      <span className="relative z-10 hidden md:inline-block">
+      <span className="relative z-10 hidden md:inline-block font-medium underline-offset-4 text-blue-700 dark:text-blue-400 hover:underline active:no-underline sm:hover:text-blue-700 active:text-blue-900 sm:active:text-blue-900">
         <Link
           href={href}
           className={`${isHovering && "underline"}`}
@@ -91,7 +91,7 @@ export default function CustomLink({ children, href }) {
           </Link>
         )}
       </span>
-      <a
+      <Link
         href={href}
         className={`${isHovering && "underline"} md:hidden`}
         onMouseEnter={handleMouseEnterLink}
@@ -100,7 +100,7 @@ export default function CustomLink({ children, href }) {
         onBlur={handleMouseLeaveLink}
       >
         {children}
-      </a>
+      </Link>
     </span>
   );
 }

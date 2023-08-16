@@ -2,17 +2,20 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-16 09:54:12
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-16 09:54:15
- * @FilePath: /nextjs-roadmap/app/api/link-preview.ts
+ * @LastEditTime: 2023-08-16 10:57:51
+ * @FilePath: /nextjs-roadmap/app/api/link-preview/route.ts
  * @Description: 
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
  */
+import { NextRequest, NextResponse } from 'next/server'
 import mql from '@microlink/mql';
 
-export default async function handler(req, res) {
+export async function GET(request: NextRequest) {
+
   try {
-    let { url } = req.query;
+    const url = request.nextUrl.searchParams.get("url")
+    console.log(url)
     const { status, data } = await mql(url, {
       screenshot: true,
       // @ts-ignore
@@ -22,12 +25,13 @@ export default async function handler(req, res) {
         browser: 'dark'
       }
     });
-    res.status(200).json({
-      image: data?.screenshot?.url
-    });
+
+  return NextResponse.json({"image": data?.screenshot?.url}, { status: 200 })
+
+  
+
+
   } catch (error) {
-    res.status(500).json({
-      error: JSON.stringify(error)
-    });
+    return NextResponse.json({ error: JSON.stringify(error) }, { status: 500 })
   }
 }
