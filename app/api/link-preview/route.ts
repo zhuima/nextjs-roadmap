@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-16 09:54:12
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-16 10:57:51
+ * @LastEditTime: 2023-08-16 11:17:12
  * @FilePath: /nextjs-roadmap/app/api/link-preview/route.ts
  * @Description: 
  * 
@@ -14,8 +14,9 @@ import mql from '@microlink/mql';
 export async function GET(request: NextRequest) {
 
   try {
-    const url = request.nextUrl.searchParams.get("url")
+    const url: string = (request.nextUrl.searchParams.get("url") || '').toString();
     console.log(url)
+
     const { status, data } = await mql(url, {
       screenshot: true,
       // @ts-ignore
