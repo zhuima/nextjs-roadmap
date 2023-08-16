@@ -10,7 +10,7 @@ import "react-medium-image-zoom/dist/styles.css";
 import { cn } from "../lib/utils";
 import { Callout } from "./callout";
 import { MdxCard } from "./mdx-card";
-import { CopyButton } from "./copycode";
+import CustomLink from "./customlink";
 import Pre from "./precode";
 
 const CustomImage = ({ ...props }: React.HTMLAttributes<HTMLElement>) => (
@@ -186,6 +186,7 @@ const components = {
   ),
   Image: CustomImage,
   Callout,
+  CustomLink,
   Chrono,
   Card: MdxCard,
   pre: Pre,
