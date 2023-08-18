@@ -1,3 +1,13 @@
+/*
+ * @Author: zhuima zhuima314@gmail.com
+ * @Date: 2023-08-01 11:42:12
+ * @LastEditors: zhuima zhuima314@gmail.com
+ * @LastEditTime: 2023-08-18 10:48:26
+ * @FilePath: /nextjs-roadmap/components/callout.tsx
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ */
 import { cn } from "../lib/utils";
 
 interface CalloutProps {
@@ -14,16 +24,58 @@ export function Callout({
 }: CalloutProps) {
   return (
     <div
-      className={cn("my-6 flex items-start rounded-md border border-l-4 p-4", {
-        "border-red-900 bg-red-50": type === "danger",
-        "border-yellow-900 bg-yellow-50": type === "warning",
-        "border-green-900 bg-green-50": type === "success",
-        "border-blue-900 bg-blue-50": type === "info",
-      })}
+      className={cn(
+        "my-6 flex w-full rounded-lg border-l-[6px] bg-opacity-[15%] p-4 shadow-md",
+        {
+          "border-[#F87171] bg-[#f871715b]": type === "danger",
+          "border-l-[#F0A92D] bg-[#ddb26952]": type === "warning",
+          "border-[#009400] bg-[#e6f6e6]": type === "success",
+          "border-l-[#007BC3] bg-[#7cc3ec67]": type === "info",
+        }
+      )}
       {...props}
     >
-      {icon && <span className="mr-4 text-2xl">{icon}</span>}
-      <div>{children}</div>
+      <span className="pr-3">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="10"
+            cy="10"
+            r="10"
+            fill={cn({
+              "#F87171": type === "danger",
+              "#F0A92D": type === "warning",
+              "#009400": type === "success",
+              "#007BC3": type === "info",
+            })}
+          ></circle>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M14.1203 6.78954C14.3865 7.05581 14.3865 7.48751 14.1203 7.75378L9.12026 12.7538C8.85399 13.02 8.42229 13.02 8.15602 12.7538L5.88329 10.4811C5.61703 10.2148 5.61703 9.78308 5.88329 9.51682C6.14956 9.25055 6.58126 9.25055 6.84753 9.51682L8.63814 11.3074L13.156 6.78954C13.4223 6.52328 13.854 6.52328 14.1203 6.78954Z"
+            fill="white"
+          ></path>
+        </svg>
+      </span>
+
+      <div className="w-full">
+        <h5
+          className={cn("mb-3 text-base font-semibold", {
+            "text-[#F87171]": type === "danger",
+            "text-[#F0A92D]": type === "warning",
+            "text-[#009400]": type === "success",
+            "text-[#007BC3]": type === "info",
+          })}
+        >
+          TIP
+        </h5>
+        <div>{children}</div>
+      </div>
     </div>
   );
 }
