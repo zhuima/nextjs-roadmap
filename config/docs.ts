@@ -121,9 +121,11 @@ export const docsConfig: DocsConfig = {
         },
         { 
           title: "简单测试",
+          href: "/docs/documentation/real-world-project/landing-page",
           items: [
             {
               title: "测试1",
+              href: "/docs/documentation/real-world-project/landing-page",
               items: [
                 {
                   title: "测试11",
