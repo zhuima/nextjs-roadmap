@@ -58,13 +58,17 @@ npm - v
 ## Next.js 项目创建
 
 <Steps>
-### 创建一个新的 Next.js 项目，在终端中输入以下命令：
+### 创建项目
+
+创建一个新的 Next.js 项目，在终端中输入以下命令：
 
 ```bash
 npx create-next-app@latest landing-page
 ```
 
-### 对应的参数，这里选择集成 TypeScript 和 Tailwind CSS，这样我们就不用在手动设置了
+### _next.config.js_ 对应配置
+
+创建过程中对应的参数，这里选择集成 TypeScript 和 Tailwind CSS，这样我们就不用在手动设置了
 
 ```JavaScript
 npx create-next-app@latest landing-page
@@ -78,7 +82,9 @@ npx create-next-app@latest landing-page
 ✔ What import alias would you like configured? … @/*
 ```
 
-### 然后进入项目目录，在终端中输入以下命令以启动 Next.js 开发服务器：
+### 启动服务
+
+进入项目目录，在终端中输入以下命令以启动 Next.js 开发服务器：
 
 ```bash
 cd landing-page
@@ -88,7 +94,7 @@ npm run dev
 
 在浏览器中打开 http://localhost:3000/ 以查看运行效果。
 
-### 创建子目录
+### 组件库目录创建
 
 到这里一个新的 Next.js 项目框架已经搭建起来了，但这只是一个简单的框架，接下来我们需要创建 components 目录用来存放我们的组件，当前的目录结构如下：
 
@@ -124,7 +130,9 @@ npm run dev
   priority={true}
 />
 
-### 集成 Chakra UI 到 Next.js 项目中来
+### 集成 Chakra UI
+
+以下步骤带领大家吧 Chakra UI 集成到 Next.js 项目中来
 
 - 基本环境的最后一步就是安装 Chakra UI 到我们的项目中来，你可以使用下面的命令，更多信息可以参考[Chakra UI 官方文档](https://chakra-ui.com/getting-started/nextjs-guide)
 
@@ -183,7 +191,7 @@ export default function RootLayout({
 }
 ```
 
-### 效果展示
+### 验证效果
 
 到此为止，我们的基础环境算是告一段落，接下来我们开始正式进行搭建 Landing Page 的阶段。我们来看下效果
 
@@ -209,7 +217,9 @@ export default function RootLayout({
 - Pricing 部分包括不同价格方案的卡片。
 - Footer 部分包括版权信息和社交媒体链接。
 
-### 集成 Header
+### 添加 Header 组件
+
+#### Header 组件创建
 
 首先我们打开网站 [chakra-templates](https://chakra-templates.dev/), 选择模版中的 page-sections 部分，找到 Navbar，选择一个我们喜欢的风格，选择在 app/components 下创建一个 Header.tsx 的文件，然后复制代码到我们的这个文件中去，然后编辑 app 目录下的 page.tsx 文件引入 Header 组件
 
@@ -226,7 +236,7 @@ export default function Home() {
 }
 ```
 
-效果如下
+#### 效果展示
 
 <Image
   src="https://img.techrk1688.eu.org/file/b5ea86afb14e8baae1b64.png"
@@ -238,7 +248,7 @@ export default function Home() {
 
 ### 最终效果
 
-其余的步骤跟第一步都一样，我们直接来看最终的效果
+中间其他组件的添加步骤跟添加 Header 组件的操作一样，我们直接来看最终的效果
 
 <Image
   src="https://img.techrk1688.eu.org/file/caa6d9d8712b69498d7b5.gif"
@@ -248,7 +258,29 @@ export default function Home() {
   priority={true}
 />
 
+可以看到，从头到尾我们都没有自己编写代码，完全是基于开源的组件或组件库来帮我们实现 Landing Page 的构建，致敬这些开源组件和框架。
+
+## SEO 怎么做
+
+网站做好了，要考虑 SEO 的问题，以下三个站点是对应各搜索引擎的 SEO 工具平台，大家可以自行查阅下
+
+[Google SEO](https://search.google.com/search-console)
+
+[Bing SEO](https://www.bing.com/webmasters)
+
+[百度 SEO](https://ziyuan.baidu.com/)
+
+## 移动端兼容
+
+在前面的过程中，我们一直都是在 PC 端验证我们制作的 Landing Page 网站，并没有在移动端查看过，那么实际情况究竟如何呢？
+
+## 性能问题
+
+网站的打开速度直接影响了用户的体验，所以网站上线之后我们要做的事情就是检验我们网站的响应速度到底如何，我们可以借助 [Google pagespeed](https://pagespeed.web.dev/) 来查看效果。
+
 ## 提交代码到 GitHub
+
+### 步骤概况
 
 1. 在 GitHub 上创建一个新的仓库。
 2. 在本地计算机上使用 git clone 命令克隆新仓库。
