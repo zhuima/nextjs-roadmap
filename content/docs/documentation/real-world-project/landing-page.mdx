@@ -1,6 +1,6 @@
 ---
 title: 10分钟搭建一个Landing Page
-description: 如何使用 Tailwind CSS 写官网.
+description: 在本文中，我们将 Next.js 13 + TailwindCSS + TypeScript 实现 Landing Page 的搭建。
 time: 2023-07-06 16:18:27
 ---
 
@@ -12,11 +12,11 @@ time: 2023-07-06 16:18:27
 
 2022 年 10 月，发布了 Next.js 13，增加了一个名为 App Directory 或  `app` App Router 的新概念作为 β 版本。目前已经是 stable 版本
 
-▶ [Getting Started | Next.js](https://beta.nextjs.org/docs) - the docs for the App Router (beta)
+▶ [Getting Started | Next.js](https://beta.nextjs.org/docs) - the docs for the App Router
 
-在本文中，我们将 Next.js 13 + TailwindCSS + TypeScript 实现 Landing Page 的搭建，重点是应用程序目录。】。作为初步知识，如果您知道如何使用 React 和 TypeScript 的基础知识，它将更容易阅读。 但是，即使您从未接触过此类技术，也可以通过应用程序的开发来学习 Next.js 。
+在本文中，我们将 Next.js 13 + TailwindCSS + TypeScript 实现 Landing Page 的搭建，重点是应用程序目录。作为初步知识，如果您知道如何使用 React 和 TypeScript 的基础知识，它将更容易阅读。 但是，即使您从未接触过此类技术，也可以通过应用程序的开发来学习 Next.js 。
 
-在 2023 年 5 月，_Next_.*js* 13.4 是一个推出，标志着 App Router 一达到*稳定*，可用于生产。本文中使用的版本是 Next.js 13.4.9。
+在 2023 年 5 月，_Next_.*js* 13.4 是一个推出，标志着 App Router 达到*稳定*，可用于生产。本文中使用的版本是 Next.js 13.4.9。
 
 ## 要求
 
@@ -32,7 +32,11 @@ time: 2023-07-06 16:18:27
 
 ### 基础环境安装
 
+#### 什么是 Node JS？
+
 node js：是一个基于 JavaScript 编程语言的跨平台、开源、服务器层运行时环境（但不限于）。Node.js® 是使用 Chrome 的 JavaScript 引擎 V8 构建的 JavaScript 运行时环境。
+
+#### 什么是 NPM？
 
 npm：NPM（节点包管理器）是由 Isaac Schlueter 完全在 JavaScript 语言下开发的包管理器，通过它我们只需一行简单的代码即可获得任何库，这将使我们能够以简单的方式添加依赖项，分发包并有效地管理模块和要开发的项目。喷泉
 它是 Node.js 的标准包管理器或依赖项。
@@ -42,13 +46,13 @@ npm：NPM（节点包管理器）是由 Isaac Schlueter 完全在 JavaScript 语
 > node 版本 要求 14.x 以上
 
 ```bash
-node - v;
+node - v
 ```
 
 > npm 版本 要求 6.x 以上
 
 ```bash
-npm - v;
+npm - v
 ```
 
 ### 创建一个新的 Next.js 项目，在终端中输入以下命令：
@@ -62,13 +66,13 @@ npx create-next-app@latest landing-page
 ```JavaScript
 npx create-next-app@latest landing-page
 
-✔ Would you like to use TypeScript? … No / <span style="border-bottom:2px dashed yellow;">Yes</span>
-✔ Would you like to use ESLint? … No / <span style="border-bottom:2px dashed yellow;">Yes</span>
-✔ Would you like to use Tailwind CSS? … No / <span style="border-bottom:2px dashed yellow;">Yes</span>
-✔ Would you like to use `src/` directory? … <span style="border-bottom:2px dashed yellow;">Yes</span> / Yes
-✔ Would you like to use App Router? (recommended) … No / <span style="border-bottom:2px dashed yellow;">Yes</span>
-✔ Would you like to customize the default import alias? … No / <span style="border-bottom:2px dashed yellow;">Yes</span>
-✔ What import alias would you like configured? … <span style="border-bottom:2px dashed yellow;">@/*</span>
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like to use `src/` directory? … Yes / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to customize the default import alias? … No / Yes
+✔ What import alias would you like configured? … @/*
 ```
 
 然后进入项目目录，在终端中输入以下命令以启动 Next.js 开发服务器：
@@ -80,6 +84,109 @@ npm run dev
 ```
 
 在浏览器中打开 http://localhost:3000/ 以查看运行效果。
+
+到这里一个新的 Next.js 项目框架已经搭建起来了，但这只是一个简单的框架，接下来我们需要创建 components 目录用来存放我们的组件，当前的目录结构如下：
+
+```bash
+➜  landing-page git:(main) tree -I node_modules
+.
+├── README.md
+├── app
+│   ├── components
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── next-env.d.ts
+├── next.config.js
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── public
+│   ├── next.svg
+│   └── vercel.svg
+├── tailwind.config.ts
+└── tsconfig.json
+
+3 directories, 14 files
+```
+
+<Image
+  src="https://img.techrk1688.eu.org/file/9c954d35cb2a5d4b72915.png"
+  height="404"
+  width="auto"
+  alt="项目结构|Landing Page 实战"
+  priority={true}
+/>
+
+### 集成 Chakra UI 到 Next.js 项目中来
+
+- 基本环境的最后一步就是安装 Chakra UI 到我们的项目中来，你可以使用下面的命令，更多信息可以参考[Chakra UI 官方文档](https://chakra-ui.com/getting-started/nextjs-guide)
+
+```bash
+npm i @chakra-ui/react @chakra-ui/next-js @emotion/react @emotion/styled framer-motion react-icons
+```
+
+- 创建 Provider
+
+```js
+// app/providers.tsx
+"use client";
+
+import { CacheProvider } from "@chakra-ui/next-js";
+import { ChakraProvider } from "@chakra-ui/react";
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return (
+    <CacheProvider>
+      <ChakraProvider>{children}</ChakraProvider>
+    </CacheProvider>
+  );
+}
+```
+
+- 接入到 Layout.tsx 入口文件中，正好这里我把 Layout.tsx 中的 metadata 也给修改下
+
+```js
+// app/layout.tsx
+import "@/app/globals.css";
+import { Providers } from "@/app/providers";
+
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Create Next App10分钟搭建一个Landing Page",
+  description:
+    "在本文中，我们将 Next.js 13 + TailwindCSS + TypeScript 实现 Landing Page 的搭建.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode,
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
+}
+```
+
+到此为止，我们的基础环境算是告一段落，接下来我们开始正式进行搭建 Landing Page 的阶段。我们来看下效果
+
+<Image
+  src="https://img.techrk1688.eu.org/file/bccccc72643765212dd09.png"
+  height="404"
+  width="auto"
+  alt="初步集成Chakra UI效果展示|Landing Page 实战"
+  priority={true}
+/>
 
 ## Landing Page 的组成
 
@@ -95,12 +202,39 @@ npm run dev
 
 ### 集成 Header
 
-## 开始
+首先我们打开网站 [chakra-templates](https://chakra-templates.dev/), 选择模版中的 page-sections 部分，找到 Navbar，选择一个我们喜欢的风格，选择在 app/components 下创建一个 Header.tsx 的文件，然后复制代码到我们的这个文件中去，然后编辑 app 目录下的 page.tsx 文件引入 Header 组件
 
-若要开始，请使用以下命令创建新的 Next.js 项目：
+```js
+import Image from "next/image";
+import Header from "@/app/components/Header";
 
-```tsx
-npx create-next-app@latest
+export default function Home() {
+  return (
+    <>
+      <Header />
+    </>
+  );
+}
 ```
 
-对应的 **next.config.js** 配置
+效果如下
+
+<Image
+  src="https://img.techrk1688.eu.org/file/b5ea86afb14e8baae1b64.png"
+  height="404"
+  width="auto"
+  alt="集成Header之后效果|Landing Page 实战"
+  priority={true}
+/>
+
+### 最终效果
+
+其余的步骤跟第一步都一样，我们直接来看最终的效果
+
+<Image
+  src="https://img.techrk1688.eu.org/file/bf153b882c262db2322c1.png"
+  height="404"
+  width="auto"
+  alt="最终效果|Landing Page 实战"
+  priority={true}
+/>
