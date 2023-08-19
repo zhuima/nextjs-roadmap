@@ -55,13 +55,16 @@ node - v
 npm - v
 ```
 
+## Next.js 项目创建
+
+<Steps>
 ### 创建一个新的 Next.js 项目，在终端中输入以下命令：
 
 ```bash
 npx create-next-app@latest landing-page
 ```
 
-对应的参数，这里选择集成 TypeScript 和 Tailwind CSS，这样我们就不用在手动设置了
+### 对应的参数，这里选择集成 TypeScript 和 Tailwind CSS，这样我们就不用在手动设置了
 
 ```JavaScript
 npx create-next-app@latest landing-page
@@ -75,7 +78,7 @@ npx create-next-app@latest landing-page
 ✔ What import alias would you like configured? … @/*
 ```
 
-然后进入项目目录，在终端中输入以下命令以启动 Next.js 开发服务器：
+### 然后进入项目目录，在终端中输入以下命令以启动 Next.js 开发服务器：
 
 ```bash
 cd landing-page
@@ -84,6 +87,8 @@ npm run dev
 ```
 
 在浏览器中打开 http://localhost:3000/ 以查看运行效果。
+
+### 创建子目录
 
 到这里一个新的 Next.js 项目框架已经搭建起来了，但这只是一个简单的框架，接下来我们需要创建 components 目录用来存放我们的组件，当前的目录结构如下：
 
@@ -178,6 +183,8 @@ export default function RootLayout({
 }
 ```
 
+### 效果展示
+
 到此为止，我们的基础环境算是告一段落，接下来我们开始正式进行搭建 Landing Page 的阶段。我们来看下效果
 
 <Image
@@ -187,6 +194,8 @@ export default function RootLayout({
   alt="初步集成Chakra UI效果展示|Landing Page 实战"
   priority={true}
 />
+
+</Steps>
 
 ## Landing Page 的组成
 
