@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-01 11:26:06
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-15 15:48:39
+ * @LastEditTime: 2023-08-19 09:58:48
  * @FilePath: /nextjs-roadmap/config/docs.ts
  * @Description: 
  * 
@@ -115,10 +115,10 @@ export const docsConfig: DocsConfig = {
           title: "写在前面",
           href: "/docs/documentation/real-world-project",
         },
-        // {
-        //   title: "落地页",
-        //   href: "/docs/documentation/real-world-project/landing-page",
-        // },
+        {
+          title: "10 分钟搭建一个 Landing Page",
+          href: "/docs/documentation/real-world-project/landing-page",
+        },
         //         {
         //   title: "博客项目",
         //   href: "/docs/documentation/real-world-project/blog",
