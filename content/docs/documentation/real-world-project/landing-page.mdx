@@ -238,3 +238,92 @@ export default function Home() {
   alt="最终效果|Landing Page 实战"
   priority={true}
 />
+
+## 提交代码到 GitHub
+
+1. 在 GitHub 上创建一个新的仓库。
+2. 在本地计算机上使用 git clone 命令克隆新仓库。
+3. 将 Landing Page 代码复制到本地仓库。
+4. 使用 git add 命令将所有更改添加到 Git 索引中。
+5. 使用 git commit 命令提交更改。
+6. 使用 git push 命令将更改推送到 GitHub 仓库。
+
+### 完整的操作步骤如下所示：
+
+1. 在 GitHub 上创建一个新的仓库。
+
+- 登录 GitHub 帐户。
+- 单击页面右上角的“+”符号。
+- 选择“New repository”。
+- 输入仓库名称，选择公共或私有，并勾选“Initialize this repository with a README”选项。
+- 单击“Create repository”按钮。
+
+2. 在本地计算机上使用 git clone 命令克隆新仓库。
+
+- 打开终端或命令行提示符。
+- 输入以下命令并按 Enter 键：
+
+  ```bash
+  git clone https://github.com/USERNAME/REPOSITORY.git
+
+  ```
+
+- 替换“USERNAME”和“REPOSITORY”为您的 GitHub 用户名和新创建的仓库名称。
+
+3. 将 Landing Page 代码复制到本地仓库。
+
+- 将编辑器打开到 Landing Page 代码所在的文件夹。
+- 选择所有文件并复制。
+- 在本地仓库中打开相应的文件夹。
+- 将文件粘贴到该文件夹中。
+
+4. 使用 git add 命令将所有更改添加到 Git 索引中。
+
+- 打开终端或命令行提示符。
+- 进入本地仓库的目录。
+- 输入以下命令并按 Enter 键：
+
+```bash
+git add .
+
+```
+
+5. 使用 git commit 命令提交更改。
+
+- 输入以下命令并按 Enter 键：
+
+```bash
+git commit -m "提交信息"
+
+```
+
+- 将“提交信息”替换为您的提交信息。
+
+6. 使用 git push 命令将更改推送到 GitHub 仓库。
+
+- 输入以下命令并按 Enter 键：
+
+```bash
+git push origin main
+
+```
+
+- 将“main”替换为您的默认分支名称。
+
+现在，您的 Landing Page 代码已经成功提交到 GitHub 仓库中。
+
+6. 将 Landing Page 部署到 Vercel
+
+在 Vercel 上部署 Landing Page 的步骤如下：
+
+1. 注册 Vercel 账号并登录。
+2. 将 Landing Page 的代码上传到 GitHub 仓库中。
+3. 在 Vercel 控制台中，选择“Import Project”并选择“GitHub”。
+4. 授权 Vercel 访问 GitHub 仓库并选择要部署的项目。
+5. 在部署设置中，选择 Next.js 作为框架并保存设置。
+6. 等待 Vercel 自动构建和部署 Landing Page，这可能需要几分钟的时间。
+7. 部署完成后，访问分配的 URL 以查看 Landing Page 的运行效果。
+
+需要注意的是，在部署过程中可能会遇到一些问题，例如构建失败或页面无法正常访问等。如果遇到这些问题，可以在 Vercel 控制台中查看日志并尝试解决问题。同时，也可以在 Vercel 的文档中查找相关的解决方案和参考资料。
+
+希望这个目录对您有所帮助！
