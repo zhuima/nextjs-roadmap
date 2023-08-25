@@ -22,6 +22,7 @@ const nextConfig = {
       "img.techrk1688.eu.org",
       "iad.microlink.io",
       "dummyimage.com",
+      "d1w019qw3bn26k.cloudfront.net",
     ],
   },
   async rewrites() {

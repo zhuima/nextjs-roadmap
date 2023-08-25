@@ -17,6 +17,8 @@ const projectsData = [
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/3b133aafa02c089bef10a.jpg',
     href: 'https://landing-page.techrk1688.eu.org',
+    author: 'zhuima',
+    project_layout: 'https://img.techrk1688.eu.org/file/57d4a0e78b006ff964613.png',
   },
     {
     id: 10087,
@@ -26,6 +28,8 @@ const projectsData = [
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/2373ffc8bda0d77cee088.png',
     href: '#',
+        author: 'zhuima',
+            project_layout: 'https://img.techrk1688.eu.org/file/57d4a0e78b006ff964613.png',
   },
     {
     id: 10088,
@@ -35,6 +39,8 @@ const projectsData = [
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/651b19a74f2e1d37154cb.png',
     href: '#',
+        author: 'zhuima',
+            project_layout: 'https://img.techrk1688.eu.org/file/57d4a0e78b006ff964613.png',
   },
       {
     id: 10089,
@@ -44,6 +50,8 @@ const projectsData = [
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/99463ff8744faacf0f6b3.jpg',
     href: '#',
+        author: 'zhuima',
+            project_layout: 'https://img.techrk1688.eu.org/file/57d4a0e78b006ff964613.png',
   },
         {
     id: 10090,
@@ -53,6 +61,8 @@ const projectsData = [
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/667f548993d7f543e0f30.jpg',
     href: '#',
+        author: 'zhuima',
+            project_layout: 'https://img.techrk1688.eu.org/file/57d4a0e78b006ff964613.png',
   },
   
 ]
