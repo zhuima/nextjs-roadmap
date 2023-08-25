@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-05-10 15:05:55
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-16 11:02:26
+ * @LastEditTime: 2023-08-25 14:46:00
  * @FilePath: /nextjs-roadmap/next.config.js
  * @Description:
  *
@@ -21,6 +21,7 @@ const nextConfig = {
       "i.ibb.co",
       "img.techrk1688.eu.org",
       "iad.microlink.io",
+      "dummyimage.com",
     ],
   },
   async rewrites() {

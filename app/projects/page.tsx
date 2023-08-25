@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-05-10 15:05:55
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-01 15:00:25
+ * @LastEditTime: 2023-08-25 15:36:30
  * @FilePath: /nextjs-roadmap/app/projects/page.tsx
  * @Description:
  *
@@ -65,7 +65,7 @@ export default function Page() {
                       </div>
                     </div>
                     <Link
-                      href={v.href}
+                      href={`/projects/${v.id}`}
                       className="absolute right-4 mx-auto text-white bg-indigo-500 border-0 py-1 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                     >
                       <span className="relative text-sm font-semibold text-white dark:text-gray-900 ">

@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-07-28 14:13:59
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-15 15:39:04
+ * @LastEditTime: 2023-08-25 15:35:35
  * @FilePath: /nextjs-roadmap/config/projects.ts
  * @Description: 
  * 
@@ -16,12 +16,12 @@ const projectsData = [
     tag: `Landing Page`,
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/3b133aafa02c089bef10a.jpg',
-    href: '#',
+    href: 'https://landing-page.techrk1688.eu.org',
   },
     {
     id: 10087,
     title: '30分钟搭建一个TODO应用',
-    description: `如何快速便捷的搭建一个TODO应用，带你快速实现基于Next.js的CURD`,
+    description: `如何快速便捷的搭建一个TODO应用,带你快速实现基于Next.js的CURD`,
     tag: `TODO Application`,
     time: `2023-07`,
     imgSrc: 'https://img.techrk1688.eu.org/file/2373ffc8bda0d77cee088.png',
