@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { MdRssFeed } from "react-icons/md";
+
 import wechat from "../assets/wechat.jpg";
 
 const Heading = () => {
@@ -84,6 +86,9 @@ const Footer = () => {
             </svg>
             {isHovering && <Heading />}
           </div>
+          <Link href="/feed.xml" rel="noreferrer" target="_blank">
+            <MdRssFeed color="#ee802f" size="30px" />
+          </Link>
           {/* <a className="text-gray-500">
             <svg
               fill="currentColor"
