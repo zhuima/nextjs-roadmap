@@ -1,8 +1,18 @@
 /*
  * @Author: zhuima zhuima314@gmail.com
+ * @Date: 2023-08-25 18:39:48
+ * @LastEditors: zhuima zhuima314@gmail.com
+ * @LastEditTime: 2023-09-01 10:57:48
+ * @FilePath: /nextjs-roadmap/app/projects/[id]/page.tsx
+ * @Description:
+ *
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ */
+/*
+ * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-05-10 15:05:55
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-25 18:37:09
+ * @LastEditTime: 2023-09-01 10:55:43
  * @FilePath: /nextjs-roadmap/app/projects/[id]/page.tsx
  * @Description: https://www.bilibili.com/video/BV1Ce411N7pV/
  *
@@ -12,8 +22,8 @@ import Image from "next/image";
 import Link from "next/link";
 import projectsData from "@/config/projects";
 import { DocsPageHeader } from "@/components/page-header";
-
-import Pre from "@/components/precode";
+import ZoomImage from "@/components/zoomimage";
+import DocFooter from "@/components/doc-footer";
 function filterProjects(projects, id) {
   // console.log("full project data", projects);
   const project = projects.find((project) => project.id.toString() === id);
@@ -273,16 +283,20 @@ export default function Page({ params }) {
                 <h3>项目结构</h3>
                 <div>本项目结构如下:</div>
 
-                <div className="mt-6 overflow-hidden bg-gray-100 rounded-xl">
-                  <Image
+                <div className="mt-6 overflow-hidde rounded-xl">
+                  <ZoomImage
                     src={project.project_layout}
-                    width="640"
-                    height="150"
-                    className="block w-full rounded-t-xl"
+                    height="404"
+                    // @ts-ignore
+                    width="auto"
                     unoptimized
                     alt={project.title}
+                    priority={true}
+                    placeholder="blur"
                   />
                 </div>
+                <DocFooter pageTitle={project.title} />
+                <hr className="my-4" />
               </div>
             </div>
           </div>
