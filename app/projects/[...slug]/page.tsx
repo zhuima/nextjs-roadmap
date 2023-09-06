@@ -2,8 +2,8 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-08-25 18:39:48
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-09-01 10:57:48
- * @FilePath: /nextjs-roadmap/app/projects/[id]/page.tsx
+ * @LastEditTime: 2023-09-06 13:41:46
+ * @FilePath: /nextjs-roadmap/app/projects/[...slug]/page.tsx
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
@@ -20,26 +20,91 @@
  */
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { allProjects } from "contentlayer/generated";
+import { Icons } from "@/components/icons";
+import { Mdx } from "@/components/mdx-components";
 import projectsData from "@/config/projects";
 import { DocsPageHeader } from "@/components/page-header";
 import ZoomImage from "@/components/zoomimage";
 import DocFooter from "@/components/doc-footer";
-function filterProjects(projects, id) {
-  // console.log("full project data", projects);
-  const project = projects.find((project) => project.id.toString() === id);
-  if (project) {
-    return project;
-  } else {
-    return null;
-  }
+import { Metadata } from "next";
+import { absoluteUrl, cn } from "@/lib/utils";
+
+interface ProjectPageProps {
+  params: {
+    slug: string[];
+  };
 }
 
-export default function Page({ params }) {
-  const project = filterProjects(projectsData, params.id);
+async function getProjectFromParams(params: any) {
+  const slug = params?.slug?.join("/");
+  const project = allProjects.find((project) => project.slugAsParams === slug);
 
-  console.log("videoData id", params.id);
+  if (!project) {
+    null;
+  }
 
-  console.log("videoData", project);
+  return project;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const project = await getProjectFromParams(params);
+
+  if (!project) {
+    return {};
+  }
+
+  const url = process.env.NEXT_PUBLIC_APP_URL;
+
+  const ogUrl = new URL(`${url}/api/og`);
+  ogUrl.searchParams.set("heading", project.title);
+  ogUrl.searchParams.set("type", "Guide");
+  ogUrl.searchParams.set("mode", "dark");
+
+  return {
+    title: `${project.title} | Next.js 项目实战`,
+    description: `${project.title}、${project.description}`,
+    openGraph: {
+      title: project.title,
+      description: project.description,
+      type: "article",
+      url: absoluteUrl(project.slug),
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.description,
+      images: [ogUrl.toString()],
+    },
+  };
+}
+
+export async function generateStaticParams(): Promise<
+  ProjectPageProps["params"][]
+> {
+  return allProjects.map((project) => ({
+    slug: project.slugAsParams.split("/"),
+  }));
+}
+
+export default async function Page({ params }: ProjectPageProps) {
+  const project = await getProjectFromParams(params);
+
+  if (!project) {
+    notFound();
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <div className="container py-12">
@@ -268,13 +333,13 @@ export default function Page({ params }) {
             </div>
           </div>
 
-          <div className="w-full max-w-2xl mx-auto mt-16 lg:max-w-none lg:mt-0 lg:col-span-4">
-            <div className="pb-5 border-b border-gray-200">
+          <div className="w-full max-w-2xl mx-auto mt-16 lg:max-w-none lg:mt-0 lg:col-span-4 text-gray-700">
+            {/* <div className="pb-5 border-b border-gray-200">
               <h3 className="text-lg font-medium leading-6 text-gray-900">
                 关于 {project.title}
               </h3>
-            </div>
-            <div className="py-3 prose text-gray-700 break-words xl:pt-6 xl:pb-0 prose-indigo max-w-none">
+            </div> */}
+            {/* <div className="py-3 prose text-gray-700 break-words xl:pt-6 xl:pb-0 prose-indigo max-w-none">
               <div className="trix-content">
                 <div>
                   基于 Next.js 13 + TailwindCSS + TypeScript 实现 Landing Page
@@ -294,11 +359,19 @@ export default function Page({ params }) {
                     priority={true}
                     placeholder="blur"
                   />
-                </div>
-                <DocFooter pageTitle={project.title} />
-                <hr className="my-4" />
-              </div>
+                </div> */}
+
+            <Mdx code={project.body.code} />
+            <div className="flex justify-center py-6 lg:py-10">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background hover:bg-accent hover:text-accent-foreground h-10 py-2 px-4"
+              >
+                <Icons.chevronLeft className="mr-2 h-4 w-4" />
+                查看所有项目
+              </Link>
             </div>
+            <DocFooter pageTitle={project.title} />
           </div>
         </div>
       </div>

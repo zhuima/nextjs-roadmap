@@ -2,7 +2,7 @@
  * @Author: zhuima zhuima314@gmail.com
  * @Date: 2023-05-10 15:05:55
  * @LastEditors: zhuima zhuima314@gmail.com
- * @LastEditTime: 2023-08-25 15:36:30
+ * @LastEditTime: 2023-09-06 11:34:21
  * @FilePath: /nextjs-roadmap/app/projects/page.tsx
  * @Description:
  *
@@ -10,6 +10,7 @@
  */
 import Image from "next/image";
 import Link from "next/link";
+import { allProjects } from "contentlayer/generated";
 import projectsData from "@/config/projects";
 import { DocsPageHeader } from "@/components/page-header";
 
@@ -27,7 +28,7 @@ export default function Page() {
       </div>
       <div className="container">
         <section className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-          {projectsData.map((v) => (
+          {allProjects.map((v) => (
             <article
               key={v.id}
               className="group mx-auto w-full max-w-md transform cursor-pointer rounded-b-xl shadow-xl duration-500 hover:-translate-y-2"
@@ -65,7 +66,7 @@ export default function Page() {
                       </div>
                     </div>
                     <Link
-                      href={`/projects/${v.id}`}
+                      href={v.slug}
                       className="absolute right-4 mx-auto text-white bg-indigo-500 border-0 py-1 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
                     >
                       <span className="relative text-sm font-semibold text-white dark:text-gray-900 ">

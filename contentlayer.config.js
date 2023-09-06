@@ -67,6 +67,46 @@ export const Guide = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Project = defineDocumentType(() => ({
+  name: "Project",
+  filePathPattern: `projects/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    id: {
+      type: "number",
+      required: true,
+    },
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    tag: {
+      type: "string",
+      required: true,
+    },
+    time: {
+      type: "string",
+      required: true,
+    },
+    imgSrc: {
+      type: "string",
+      required: true,
+    },
+    author: {
+      type: "string",
+      required: true,
+    },
+    href: {
+      type: "string",
+      required: true,
+    },
+  },
+  computedFields,
+}));
+
 export const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `blog/**/*.mdx`,
@@ -162,10 +202,9 @@ const rehypeoptions = {
   },
 };
 
-
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Page, Doc, Guide, Post, Author],
+  documentTypes: [Page, Doc, Guide, Post, Author, Project],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [[rehypePrettyCode, rehypeoptions]],
